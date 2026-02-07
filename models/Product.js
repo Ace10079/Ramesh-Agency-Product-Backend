@@ -19,6 +19,19 @@ const productSchema = new mongoose.Schema(
       type: Number,
       required: true,
     },
+    category: {
+      type: String,
+      enum: [
+        "Curtains",
+        "Sofa Cover",
+        "Bedsheet",
+        "Pillow Cover",
+        "Tracks",
+        "Accessories",
+      ],
+      required: true,   // optional → remove if not mandatory
+      trim: true,
+    },
   },
   { timestamps: true }
 );
